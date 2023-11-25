@@ -1,12 +1,13 @@
 steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["build", "-t", "gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA", "."]
+#images: ["gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA"]
 
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["container", "images", "add-tag", "gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA", "gcr.io/automatedcicd-gcp/mounica-python-web-app:latest"]
-  env:
-  - "CLOUDSDK_COMPUTE_ZONE=us-central1-c"
-  - "CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster-1"
+# - name: "gcr.io/cloud-builders/gcloud"
+#   args: ["container", "images", "add-tag", "gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA", "gcr.io/automatedcicd-gcp/mounica-python-web-app:latest"]
+#   env:
+#   - "CLOUDSDK_COMPUTE_ZONE=us-central1-c"
+#   - "CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster-1"
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["container", "clusters", "get-credentials", "autopilot-cluster-1", "--zone=us-central1-c"]
