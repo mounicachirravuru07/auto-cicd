@@ -1,7 +1,6 @@
 steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["build", "-t", "gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA", "."]
-#images: ["gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA"]
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["container", "images", "add-tag", "gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA", "gcr.io/automatedcicd-gcp/mounica-python-web-app:latest"]
