@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mounica-flask-app
-        image: gcr.io/automatedcicd-gcp/mounica-flask-image:latest
+        image: us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:latest
         ports:
         - containerPort: 5000
 
@@ -34,4 +34,4 @@ spec:
       port: 80
       targetPort: 5000
   type: LoadBalancer
-  
+
