@@ -39,7 +39,7 @@ def hello():
                 font-weight: bold;
             }
         </style>
-        <title>Hello World</title>
+        <title>Hello Kitty</title>
     </head>
     <body>
         <div class="container">
