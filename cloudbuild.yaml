@@ -4,13 +4,13 @@ steps:
       - build
       - '-t'
       - >-
-        us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:$COMMIT_SHA
+        us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:${COMMIT_SHA}
       - .
   - name: gcr.io/cloud-builders/docker
     args:
       - push
       - >-
-        us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:$COMMIT_SHA
+        us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:${COMMIT_SHA}
   - name: gcr.io/cloud-builders/gcloud
     args:
       - container
@@ -32,4 +32,4 @@ steps:
     dir: .
 options:
   logging: CLOUD_LOGGING_ONLY
-
+  dynamicSubstitutions: true
