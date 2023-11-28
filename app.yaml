@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mounica-flask-app
-        image: us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app
+        image: us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:latest
         ports:
         - containerPort: 5000
 
