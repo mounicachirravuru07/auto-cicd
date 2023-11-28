@@ -39,11 +39,11 @@ def hello():
                 font-weight: bold;
             }
         </style>
-        <title>Hello Kitty</title>
+        <title>Cloud Computing</title>
     </head>
     <body>
         <div class="container">
-            <h1>Hello Kitty</h1>
+            <h1>Cloud Computing/h1>
         </div>
     </body>
     </html>
