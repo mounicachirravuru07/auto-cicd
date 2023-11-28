@@ -22,7 +22,7 @@ def hello():
                 justify-content: center;
                 height: 100vh;
                 margin: 0;
-                background: url('https://placekitten.com/1200/800') center center fixed;
+                background: url('https://aprika.com/wp-content/uploads/2022/05/istockphoto-1345778718-170667a.jpeg') center center fixed;
                 background-size: cover;
             }
             .container {
