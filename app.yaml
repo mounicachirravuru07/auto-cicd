@@ -16,7 +16,10 @@ spec:
     spec:
       containers:
       - name: mounica-flask-app
-        image: us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:${COMMIT_SHA}
+        image: us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app
+        env:
+        - name: COMMIT_SHA
+          value: "${COMMIT_SHA}"
         ports:
         - containerPort: 5000
 
