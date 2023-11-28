@@ -1,18 +1,35 @@
 steps:
-- name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:$COMMIT_SHA", "."]
-  # images: ["us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:$COMMIT_SHA"]
-
-# - name: "gcr.io/cloud-builders/gcloud"
-#   args: ["container", "images", "add-tag", "gcr.io/automatedcicd-gcp/mounica-python-web-app:$COMMIT_SHA", "gcr.io/automatedcicd-gcp/mounica-python-web-app:latest"]
-#   env:
-#   - "CLOUDSDK_COMPUTE_ZONE=us-central1-c"
-#   - "CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster-1"
-
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["container", "clusters", "get-credentials", "autopilot-cluster-1", "--zone=us-central1-c"]
-
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["kubectl", "apply", "-f", "app.yaml"]
-  dir: "app.yaml"
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - '-t'
+      - >-
+        us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:$COMMIT_SHA
+      - .
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - >-
+        us-central1-docker.pkg.dev/automated-cicd-gcp/cicdpipeline/mounica-python-web-app:$COMMIT_SHA
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - container
+      - clusters
+      - get-credentials
+      - app-cluster
+      - '--zone=us-central1'
+  - name: gcr.io/cloud-builders/kubectl
+    env:
+      - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+      - CLOUDSDK_CONTAINER_USE_APPLICATION_DEFAULT_CREDENTIALS=true
+      - CLOUDSDK_COMPUTE_REGION=us-central1
+      - CLOUDSDK_COMPUTE_ZONE=us-central1
+      - CLOUDSDK_CONTAINER_CLUSTER=app-cluster
+    args:
+      - apply
+      - '-f'
+      - app.yaml
+    dir: .
+options:
+  logging: CLOUD_LOGGING_ONLY
 
