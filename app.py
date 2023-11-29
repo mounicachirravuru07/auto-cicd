@@ -22,7 +22,7 @@ def hello():
                 justify-content: center;
                 height: 100vh;
                 margin: 0;
-                background: url('https://miro.medium.com/v2/resize:fit:1400/0*FMOlS5jaBOaCNAsX') center center fixed;
+                background: url('https://storage.googleapis.com/gweb-cloudblog-publish/images/2_Google_Cloud_Platform_CI_CD_pipeline.max-700x700.jpg') center center fixed;
                 background-size: cover;
             }
             .container {
