@@ -22,7 +22,7 @@ def hello():
                 justify-content: center;
                 height: 100vh;
                 margin: 0;
-                background: url('https://media.istockphoto.com/id/1345778718/photo/cloud-computing-the-data-transfer-and-storage-concept-consists-of-a-white-polygonal.jpg?s=612x612&w=0&k=20&c=TGuCktdAdvbqNeTlBs7CBSzjDpnDS3dxTLUmsfdqyq4=') center center fixed;
+                background: url('https://storage.googleapis.com/gweb-cloudblog-publish/images/2_Google_Cloud_Platform_CI_CD_pipeline.max-700x700.jpg') center center fixed;
                 background-size: cover;
             }
             .container {
@@ -43,7 +43,7 @@ def hello():
     </head>
     <body>
         <div class="container">
-            <h1>Cloud Computing</h1>
+            <h1>CICD PIPELINE - GROUP6</h1>
         </div>
     </body>
     </html>
