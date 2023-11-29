@@ -43,7 +43,7 @@ def hello():
     </head>
     <body>
         <div class="container">
-            <h1>Cloud-Computing/h1>
+            <h1>Cloud-Computing - Group6</h1>
         </div>
     </body>
     </html>
