@@ -22,7 +22,7 @@ def hello():
                 justify-content: center;
                 height: 100vh;
                 margin: 0;
-                background: url('https://aprika.com/wp-content/uploads/2022/05/istockphoto-1345778718-170667a.jpeg') center center fixed;
+                background: url('https://miro.medium.com/v2/resize:fit:1400/0*FMOlS5jaBOaCNAsX') center center fixed;
                 background-size: cover;
             }
             .container {
@@ -43,7 +43,7 @@ def hello():
     </head>
     <body>
         <div class="container">
-            <h1>Cloud-Computing - Group6</h1>
+            <h1>CI-CD PIPELINE</h1>
         </div>
     </body>
     </html>
