@@ -1,5 +1,5 @@
-# AutomatedCICD-GCP
-Automated CI/CD Pipeline with Google Cloud Build
+# Automated CI/CD Pipeline with Google Cloud Build
+
 Overview
 This project implements a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline using Google Cloud Build. The pipeline automates the build, test, and deployment processes, facilitating rapid and reliable software delivery.
 
@@ -32,7 +32,9 @@ Clone the Repository:
 bash
 Copy code
 git clone https://github.com/your-username/automated-cicd-pipeline.git
+
 cd automated-cicd-pipeline
+
 Configuration:
 
 Update configuration files as needed.
